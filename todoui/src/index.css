@@ -1,0 +1,360 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+/* Make table responsive */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+/* Table Styling */
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+    .task-table th,
+    .task-table td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #ddd;
+    }
+
+    .task-table th {
+        background: #f4f4f4;
+    }
+
+    /* Row hover effect */
+    .task-table tr:hover {
+        background: #f1f1f1;
+    }
+
+/* Status Badges */
+.status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.completed-status {
+    background: #4caf50;
+    color: white;
+}
+
+.pending-status {
+    background: #f44336;
+    color: white;
+}
+
+/* Button Styling */
+.btn {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.complete-btn {
+    background: #4caf50;
+    color: white;
+}
+
+    .complete-btn:hover {
+        background: #388e3c;
+    }
+
+.undo-btn {
+    background: #2196f3;
+    color: white;
+}
+
+    .undo-btn:hover {
+        background: #1976d2;
+    }
+
+/* Completed Task Styling */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .task-table th,
+    .task-table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
+
+/* Container Styling */
+.todo-input-container {
+    max-width: 450px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Title Styling */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Input Field */
+.task-input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+    .task-input:focus {
+        border-color: #007bff;
+        outline: none;
+    }
+
+/* Add Task Button */
+.add-task-btn {
+    padding: 12px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+    .add-task-btn:hover {
+        background: #0056b3;
+    }
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .input-wrapper {
+        flex-direction: column;
+    }
+
+    .task-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+/* Filter Buttons Container */
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Button Styling */
+.filter-btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+    /* 
+/* All Button */
+    .filter-btn.all {
+        background: #007bff;
+        color: white;
+    }
+
+        .filter-btn.all:hover {
+            background: #0056b3;
+        }
+
+    /* Completed Button */
+    .filter-btn.completed {
+        background: #28a745;
+        color: white;
+    }
+
+        .filter-btn.completed:hover {
+            background: #1e7e34;
+        }
+
+    /* Pending Button */
+    .filter-btn.pending {
+        background: #ffc107;
+        color: black;
+    }
+
+        .filter-btn.pending:hover {
+            background: #e0a800;
+        }
+
+    /* Button Hover Effect */
+    .filter-btn:hover {
+        transform: scale(1.05);
+    }
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-btn {
+        width: 80%;
+        text-align: center;
+    }
+}
+
+.filter-btn {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+    .filter-btn.all {
+        background: blue;
+        color: white;
+    }
+
+    .filter-btn.completed {
+        background: green;
+        color: white;
+    }
+
+    .filter-btn.pending {
+        background: gold;
+        color: black;
+    }
+
+*/
+
+.filter-btn.active {
+    border: 2px solid black;
+    transform: scale(1.05);
+}
+
+.search-container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-input {
+    width: 60%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
